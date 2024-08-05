@@ -198,7 +198,7 @@ export function updateConfigContext(newContext: Partial<ConfigContext>): void {
 if (process.env.NODE_ENV === "development") {
   updateConfigContext({
     PROXY_PATH: "/proxy",
-    EMULATOR_ENDPOINT: "https://localhost:8081",
+    EMULATOR_ENDPOINT: "https://localhost:10443",
     PORTAL_BACKEND_ENDPOINT: PortalBackendEndpoints.Mpac,
     MONGO_PROXY_ENDPOINT: MongoProxyEndpoints.Mpac,
     CASSANDRA_PROXY_ENDPOINT: CassandraProxyEndpoints.Mpac,
@@ -255,3 +255,4 @@ export async function initializeConfiguration(): Promise<ConfigContext> {
 }
 
 export { configContext };
+
