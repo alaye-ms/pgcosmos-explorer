@@ -53,7 +53,7 @@ export class PipelinedQueryExecutionContext {
             }
             if (Object.keys(partitionedQueryExecutionInfo.queryInfo.groupByAliasToAggregateType).length >
                 0 ||
-                (partitionedQueryExecutionInfo.queryInfo.aggregates && partitionedQueryExecutionInfo.queryInfo.aggregates.length > 0) ||
+                (partitionedQueryExecutionInfo.queryInfo.aggregates !=null && partitionedQueryExecutionInfo.queryInfo.aggregates.length > 0) ||
                 partitionedQueryExecutionInfo.queryInfo.groupByExpressions.length > 0) {
                 if (partitionedQueryExecutionInfo.queryInfo.hasSelectValue) {
                     this.endpoint = new GroupByValueEndpointComponent(this.endpoint, partitionedQueryExecutionInfo.queryInfo);
