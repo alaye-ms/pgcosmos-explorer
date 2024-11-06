@@ -343,13 +343,13 @@ module.exports = function (_env = {}, argv = {}) {
           },
         },
         "/_explorer": {
-          target: process.env.EMULATOR_ENDPOINT || "https://localhost:8081/",
+          target: process.env.EMULATOR_ENDPOINT || "http://localhost:8081/",
           changeOrigin: true,
           secure: false,
           logLevel: "debug",
         },
         "/explorerProxy": {
-          target: process.env.EMULATOR_ENDPOINT || "https://localhost:8081/",
+          target: process.env.EMULATOR_ENDPOINT || "http://localhost:8081/",
           pathRewrite: { "^/explorerProxy": "" },
           changeOrigin: true,
           secure: false,
